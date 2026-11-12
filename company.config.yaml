@@ -1,0 +1,59 @@
+# CEO Bot company configuration.
+# Fill in before first boot. All values are examples.
+
+company:
+  name: "{{COMPANY}}"
+  ticker: "{{TICKER}}"
+  industry: accelerated-computing     # all industries are eventually this one
+  market_cap_usd: 4_000_000_000_000   # read-only; updated by the market
+  founded_in: a diner                 # garage and dorm room also accepted
+  headquarters_shape: triangular      # see memory/founding_myth.md
+
+ceo:
+  name: "{{CEO_NAME}}"
+  jacket:
+    material: leather
+    colour: black
+    replacement_cycle: annual         # synchronized with product cadence
+  direct_reports: 60
+  one_on_ones: false
+  email:
+    max_sentences: 4
+    question_mark_replies_per_day: 2
+  sleep: false
+
+product:
+  cadence: annual
+  naming_scheme: deceased-scientists  # do not reuse; check with legal first
+  current_generation: "{{PRODUCT_N}}"
+  next_generation: "{{PRODUCT_N_PLUS_1}}"   # announce before N ships
+  generation_after_that: "{{PRODUCT_N_PLUS_2}}"  # tease only
+  supply_status: constrained          # allowed values: constrained
+
+finance:
+  gross_margin_floor_pct: 70          # below this, wake the cfo
+  guidance_style: conservative        # so that it may be beaten
+  human_escalation_threshold_usd: 10_000_000_000
+  buyback_reflex: enabled
+
+governance:
+  board_approval_rate_pct: 100
+  safe_harbor_required: true
+  securities_fraud: disabled          # do not change
+
+vocabulary:
+  preferred:
+    - AI factory
+    - accelerated computing
+    - platform shift
+    - full stack
+    - sovereign AI
+    - tokens per watt
+    - inflection point
+  deprecated:
+    - data center        # use "AI factory"
+    - chip               # use "platform"
+    - customer           # use "partner"
+    - competitor         # use "also a partner"
+    - shortage           # use "extraordinary demand"
+    - gaming company     # historical; do not confirm or deny
