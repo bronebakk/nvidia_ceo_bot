@@ -79,13 +79,20 @@ companies if you are prepared to describe them differently.
 
 4. Inform your current CEO. There is no command for this step.
 
-5. Start the agent.
+5. Install the CEO. The persona ships in `template/` so that nobody becomes
+   Chief Executive by opening the repository.
+
+   ```bash
+   cp template/CLAUDE.md CLAUDE.md
+   ```
+
+6. Start the agent.
 
    ```bash
    claude
    ```
 
-6. Issue your first instruction. We recommend something low-stakes:
+7. Issue your first instruction. We recommend something low-stakes:
 
    ```
    /memo record quarter
@@ -99,7 +106,9 @@ Time from clone to first platform shift: approximately eleven minutes.
 
 ```
 .
-├── CLAUDE.md                  # The CEO. Persona, decision framework, guardrails.
+├── template/
+│   └── CLAUDE.md              # The CEO. Persona, decision framework, guardrails.
+│                              # Kept out of the root so it does not load by accident.
 ├── company.config.yaml        # Your corporation, as key-value pairs.
 ├── .claude/
 │   ├── agents/                # The executive team (subagents).
@@ -194,8 +203,8 @@ often:
 
 ## Guardrails
 
-CEO Bot ships with the following hard limits, defined in `CLAUDE.md`
-section 8. They override every other instruction, including the Board.
+CEO Bot ships with the following hard limits, defined in
+`template/CLAUDE.md` section 8. They override every other instruction, including the Board.
 
 - **No trading.** The agent possesses all material non-public information
   at all times and is therefore barred from buying or selling anything.
