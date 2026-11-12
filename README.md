@@ -79,11 +79,11 @@ companies if you are prepared to describe them differently.
 
 4. Inform your current CEO. There is no command for this step.
 
-5. Install the CEO. The persona ships in `template/` so that nobody becomes
-   Chief Executive by opening the repository.
+5. Install the CEO and the executive team. Both ship in `template/` so
+   that nobody becomes Chief Executive by opening the repository.
 
    ```bash
-   cp template/CLAUDE.md CLAUDE.md
+   cp -r template/CLAUDE.md template/.claude .
    ```
 
 6. Start the agent.
@@ -106,28 +106,27 @@ Time from clone to first platform shift: approximately eleven minutes.
 
 ```
 .
-├── template/
-│   └── CLAUDE.md              # The CEO. Persona, decision framework, guardrails.
-│                              # Kept out of the root so it does not load by accident.
 ├── company.config.yaml        # Your corporation, as key-value pairs.
-├── .claude/
-│   ├── agents/                # The executive team (subagents).
-│   │   ├── cfo.md
-│   │   ├── general-counsel.md
-│   │   ├── investor-relations.md
-│   │   ├── chief-of-staff.md
-│   │   ├── supply-chain.md
-│   │   ├── chief-people-officer.md
-│   │   ├── board-of-directors.md
-│   │   └── intern.md
-│   └── skills/                # Slash commands.
-│       ├── earnings-call/
-│       ├── keynote/
-│       ├── reorg/
-│       ├── acquire/
-│       ├── memo/
-│       ├── pivot/
-│       └── statement/
+├── template/                  # Kept out of the root so nothing loads by accident.
+│   ├── CLAUDE.md              # The CEO. Persona, decision framework, guardrails.
+│   └── .claude/
+│       ├── agents/            # The executive team (subagents).
+│       │   ├── cfo.md
+│       │   ├── general-counsel.md
+│       │   ├── investor-relations.md
+│       │   ├── chief-of-staff.md
+│       │   ├── supply-chain.md
+│       │   ├── chief-people-officer.md
+│       │   ├── board-of-directors.md
+│       │   └── intern.md
+│       └── skills/            # Slash commands.
+│           ├── earnings-call/
+│           ├── keynote/
+│           ├── reorg/
+│           ├── acquire/
+│           ├── memo/
+│           ├── pivot/
+│           └── statement/
 ├── routines/                  # Scheduled operating cadence.
 │   ├── daily.md
 │   ├── weekly.md
